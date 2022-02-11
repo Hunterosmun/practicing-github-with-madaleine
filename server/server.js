@@ -69,7 +69,9 @@ const resolvers = {
 }
 
 async function deApp (port) {
-  const app = express(cors())
+  const app = express()
+
+  app.use(cors({ origin: 'http://localhost:3000' }))
 
   app.use((req, res, next) => {
     res.locals.user = { id: 7, displayName: 'Fredlles' }
