@@ -2,6 +2,7 @@ const { ApolloServer } = require('apollo-server-express')
 const { ApolloServerPluginDrainHttpServer } = require('apollo-server-core')
 const express = require('express')
 const http = require('http')
+const cors = require('cors')
 
 const port = 3001
 const people = [
@@ -68,7 +69,7 @@ const resolvers = {
 }
 
 async function deApp (port) {
-  const app = express()
+  const app = express(cors())
 
   app.use((req, res, next) => {
     res.locals.user = { id: 7, displayName: 'Fredlles' }
@@ -87,7 +88,7 @@ async function deApp (port) {
   server.applyMiddleware({ app })
   await new Promise(resolve => httpServer.listen({ port }, resolve))
   console.log(
-    'All around me are a million path-names, million path-names, million path-na~aa~aames'
+    `All around me are a million path-names, million path-names, million path-na~aa~aames. (port: ${port})`
   )
 
   app.get('/', (req, res) => {

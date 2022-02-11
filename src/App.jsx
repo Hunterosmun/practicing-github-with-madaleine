@@ -1,11 +1,22 @@
+import axios from 'axios'
 import React from 'react'
 import styled from 'styled-components'
 
 function App () {
+  const [info, setInfo] = React.useState([])
+  React.useEffect(() => {
+    async function apiCall () {
+      let people = await axios.get('localhost:3001/api/people')
+      console.log(people)
+      setInfo(people)
+    }
+    apiCall()
+  }, [])
   return (
     <Wrapper>
       <div>Hello</div>
       <div>How's everyone doing??</div>
+      <div>{info}</div>
     </Wrapper>
   )
 }
