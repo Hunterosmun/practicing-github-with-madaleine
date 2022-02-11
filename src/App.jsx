@@ -25,6 +25,7 @@ function App () {
         {count}
         <button onClick={() => setCount(count + 1)}>+</button>
       </span>
+      <div>Hello! This is Madaleine.</div>
     </Wrapper>
   )
 }
