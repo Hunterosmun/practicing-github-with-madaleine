@@ -1,13 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import logo from './logo.svg'
-import './App.css'
-
 function App () {
   return (
     <Wrapper>
-      <img src={logo} className='App-logo' alt='logo' />
+      <div>Hello</div>
+      <div>How's everyone doing??</div>
     </Wrapper>
   )
 }
