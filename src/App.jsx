@@ -21,11 +21,10 @@ function App () {
       <div>How's everyone doing??</div>
       <div>{info}</div>
       <span>
-        <button onClick={() => setCount(count - 1)}>-</button>
-        {count}
+        <button onClick={() => setCount(count - 1)}>-</button> {count}
         <button onClick={() => setCount(count + 1)}>+</button>
       </span>
-      <div>Hello! This is Madaleine.</div>
+      <div>Hello! This is Madaleine & Hunter.</div>
     </Wrapper>
   )
 }
