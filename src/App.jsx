@@ -17,6 +17,7 @@ function App () {
       <div>Hello</div>
       <div>How's everyone doing??</div>
       <div>{info}</div>
+      <div>Hello! This is Madaleine.</div>
     </Wrapper>
   )
 }
