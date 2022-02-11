@@ -1,0 +1,28 @@
+{
+  "name": "gql-prac",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "server": "nodemon server/server.js",
+    "start": "concurrently -p \"[{name}]\" -c \"bgBlue,bgMagenta\" -n \"client,server\" \"yarn dev\" \"yarn server\""
+  },
+  "dependencies": {
+    "@apollo/client": "^3.5.8",
+    "apollo-server-core": "^3.6.3",
+    "apollo-server-express": "^3.6.3",
+    "express": "^4.17.2",
+    "graphql": "^16.3.0",
+    "nodemon": "^2.0.15",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "styled-components": "^5.3.3"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^1.0.7",
+    "concurrently": "^7.0.0",
+    "vite": "^2.8.0"
+  }
+}
